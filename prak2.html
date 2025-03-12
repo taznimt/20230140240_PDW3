@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8"> <!-- Mengatur karakter encoding menjadi UTF-8 untuk mendukung berbagai karakter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Menyesuaikan tampilan agar responsif di berbagai perangkat -->
+    <title>Data Diri</title> <!-- Judul halaman -->
+    
+    <!-- Menghubungkan file CSS eksternal untuk gaya tampilan -->
+    <link rel="stylesheet" href="style.css">  
+    
+    <script>
+        // Fungsi untuk menampilkan dan menyembunyikan informasi tambahan
+        function toggleInfo() {
+            var infoBox = document.getElementById("extra-info"); // Mengambil elemen dengan ID "extra-info"
+            var button = document.getElementById("toggle-button"); // Mengambil elemen tombol dengan ID "toggle-button"
+            
+            if (infoBox.classList.contains("show")) { // Jika elemen memiliki class "show" (sedang ditampilkan)
+                infoBox.classList.remove("show"); // Menghapus class "show"
+                setTimeout(() => { infoBox.style.display = "none"; }, 500); // Menyembunyikan elemen setelah 500ms
+                button.textContent = "Open"; // Mengubah teks tombol kembali ke "Open"
+            } else {
+                infoBox.style.display = "block"; // Menampilkan elemen
+                setTimeout(() => { infoBox.classList.add("show"); }, 10); // Menambahkan class "show" dengan sedikit delay untuk efek animasi
+                button.textContent = "Close"; // Mengubah teks tombol menjadi "Close"
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <!-- Heading utama -->
+    <h1>Perkenalan Diri</h1>  <!-- Judul halaman utama -->
+    
+    <!-- Paragraf deskripsi diri -->
+    <p class="deskripsi">Halo, Nama saya Tasnim Fadilah Anwar. Saya adalah mahasiswa di Universitas Muhammadiyah Yogyakarta.</p>  <!-- Paragraf yang menjelaskan data diri -->
+    
+    <!-- Gambar profil dengan deskripsi -->
+    <img src="mee.jpeg" alt="Foto Profil" width="200">  <!-- Menampilkan foto profil dengan ukuran lebar 200px -->
+    <p class="gambar-deskripsi"><em>Foto profil saya</em></p>  <!-- Deskripsi gambar dengan teks miring -->
+    
+    <!-- Tombol untuk menampilkan informasi tambahan -->
+    <button id="toggle-button" onclick="toggleInfo()">Open</button> <!-- Tombol untuk membuka dan menutup informasi tambahan -->
+    
+    <!-- Informasi tambahan (tersembunyi secara default) -->
+    <div id="extra-info" style="display: none;"> <!-- Div ini berisi informasi tambahan dan disembunyikan secara default -->
+        <p class="info">Saya mengambil jurusan Teknologi Informasi dan memiliki minat dalam pemrograman web serta keamanan siber.</p>  <!-- Paragraf pertama informasi tambahan -->
+        <p class="info">Di waktu senggang, saya sering menghabiskan waktu dengan menulis, memasak, atau sekadar menikmati waktu berkualitas bersama keluarga dan teman-teman.</p> <!-- Paragraf kedua informasi tambahan -->
+    </div>
+    
+</body>
+</html>

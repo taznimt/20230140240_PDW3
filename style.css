@@ -1,0 +1,93 @@
+/* Mengatur tampilan umum halaman dengan latar belakang hiasan */
+body {
+    font-family: Arial, sans-serif; /* Mengatur jenis font */
+    background: linear-gradient(135deg, #fcc8df, #a1c4fd); /* Menggunakan gradasi warna sebagai latar belakang */
+    text-align: center; /* Teks berada di tengah */
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh; /* Memastikan latar belakang penuh pada layar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Untuk memungkinkan elemen dekoratif */
+}
+
+/* Menambahkan elemen dekoratif seperti lingkaran */
+body::before {
+    content: ""; /* Menambahkan elemen kosong untuk hiasan */
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.2); /* Warna transparan untuk efek dekoratif */
+    border-radius: 50%; /* Membuat bentuk lingkaran */
+    top: 10%;
+    left: 5%;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    bottom: 10%;
+    right: 5%;
+}
+
+/* Styling untuk heading */
+h1 {
+    color: #0f0e0e; /* Warna teks hitam */
+    font-size: 28px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Menambahkan efek bayangan pada teks */
+}
+
+/* Styling untuk paragraf deskripsi */
+.deskripsi {
+    color: #333; /* Warna teks gelap */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Styling untuk gambar profil */
+img {
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    border: 3px solid #e6f561; /* Menambahkan garis tepi */
+    margin-top: 10px;
+}
+
+/* Styling untuk deskripsi gambar */
+.gambar-deskripsi {
+    font-style: italic; /* Membuat teks miring */
+    color: gray; /* Warna teks abu-abu */
+}
+
+/* Styling untuk informasi tambahan */
+.info {
+    color: #444; /* Warna teks abu-abu gelap */
+    font-size: 16px;
+    padding: 10px;
+    background: rgba(132, 249, 251, 0.8); /* Warna latar belakang dengan transparansi */
+    border-radius: 10px; /* Membuat sudut elemen membulat */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Menambahkan efek bayangan */
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Styling untuk tombol */
+button {
+    background-color: #83dff1; /* Warna latar tombol */
+    color: rgb(41, 36, 40); /* Warna teks tombol */
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat dihover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animasi perubahan warna dan skala */
+}
+
+button:hover {
+    background-color: #1e1820; /* Warna tombol saat dihover */
+    transform: scale(1.05); /* Membuat efek tombol membesar saat dihover */
+}
